@@ -26,8 +26,6 @@ fn find_pair_that_sums_to(vec: &[u32], target_sum: u32) -> Option<(u32, u32)> {
 }
 
 fn main() {
-    println!("Hello, world!");
-
     let input = fs::read_to_string("input.txt").expect("Reading input file failed");
     let input = input.lines();
     let mut input : Vec<u32> = input.map(|n| n.parse::<u32>().unwrap()).collect();
