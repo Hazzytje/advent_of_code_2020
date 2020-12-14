@@ -24,4 +24,10 @@ fn main() {
     }).count();
 
     println!("Part 1: Number of valid passwords: {}", num_valid_passwords);
+
+    let num_valid_passwords_official = input.iter().filter(|(pos1, pos2, key, password)| {
+        (password.chars().nth((pos1 - 1) as usize).unwrap() == *key) ^ (password.chars().nth((pos2 - 1) as usize).unwrap() == *key)
+    }).count();
+
+    println!("Part 2: Number of valid passwords: {}", num_valid_passwords_official);
 }
